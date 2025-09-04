@@ -1,0 +1,978 @@
+/* Global Styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #4CAF50;
+  padding: 1rem 2rem;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-signup {
+  background-color: white;
+  color: #4CAF50;
+}
+
+.nav-signup:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-username {
+  font-weight: bold;
+}
+
+.nav-logout {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-logout:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Home Page Styles */
+.home-page {
+  min-height: calc(100vh - 80px);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.search-btn:hover {
+  background-color: #45a049;
+}
+
+.features-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.features-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #e8f5e8;
+}
+
+.cta-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.cta-btn:hover {
+  background-color: #45a049;
+}
+
+/* Bus Card Styles */
+.bus-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.bus-name {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.bus-type {
+  background: #e8f5e8;
+  color: #4CAF50;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.bus-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bus-timing {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.time-section {
+  text-align: center;
+}
+
+.time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.city {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.duration-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.duration-line {
+  width: 100px;
+  height: 2px;
+  background: #ddd;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.bus-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.seats-info {
+  text-align: right;
+}
+
+.seats-available {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.total-seats {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.price-section {
+  text-align: right;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.bus-amenities {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.amenity-tag {
+  background: #f0f8ff;
+  color: #007bff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.bus-actions {
+  text-align: right;
+}
+
+.select-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.select-btn:hover {
+  background-color: #45a049;
+}
+
+/* Auth Pages */
+.auth-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.auth-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.auth-link {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.demo-credentials {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #4CAF50;
+}
+
+.demo-credentials h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.demo-credentials p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* Bus List Page */
+.bus-list-page {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.route-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+.route-arrow {
+  font-weight: bold;
+}
+
+.route-date {
+  margin-left: 1rem;
+  font-style: italic;
+}
+
+.buses-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.no-buses {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Bus Details Page */
+.bus-details-page {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+}
+
+.bus-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.bus-info h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.route-info .timing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.price-info {
+  text-align: right;
+}
+
+.total-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.seat-selection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.booking-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.summary-details {
+  margin-bottom: 1rem;
+}
+
+.book-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.book-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Profile Page */
+.profile-page {
+  min-height: calc(100vh - 80px);
+  padding: 2rem 0;
+}
+
+.profile-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.user-info h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+.user-info p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.bookings-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.booking-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.booking-card.confirmed {
+  border-left: 4px solid #4CAF50;
+}
+
+.booking-card.cancelled {
+  border-left: 4px solid #dc3545;
+  opacity: 0.7;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-badge.confirmed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.booking-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.booking-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.booking-actions {
+  text-align: right;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+/* Loading Spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4CAF50;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-small {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.spinner-medium {
+  width: 40px;
+  height: 40px;
+  border-width: 4px;
+}
+
+.spinner-large {
+  width: 60px;
+  height: 60px;
+  border-width: 6px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-message {
+  margin-top: 1rem;
+  color: #666;
+}
+
+/* Error State */
+.error-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.error-state h2 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+/* Seat Selector */
+.seat-selector {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.seat-legend {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.seat-sample {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.seat-sample.available {
+  background: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.seat-sample.selected {
+  background: #007bff;
+  border-color: #0056b3;
+}
+
+.seat-sample.unavailable {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.bus-layout {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.driver-section, .exit-section {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.row-number {
+  width: 60px;
+  text-align: right;
+  font-weight: bold;
+  color: #666;
+}
+
+.seats-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.seat.available {
+  background: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.seat.available:hover {
+  background: #c3e6cb;
+}
+
+.seat.selected {
+  background: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+.seat.unavailable {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.seat.window {
+  border-left: 2px solid #007bff;
+}
+
+.seat.aisle {
+  border-right: 2px solid #007bff;
+}
+
+.selected-seats-info {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #e8f5e8;
+  border-radius: 4px;
+  border-left: 4px solid #4CAF50;
+}
+
+.selected-seats-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #155724;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bus-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .bus-timing {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .booking-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .seat-legend {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+  
+  .search-form {
+    padding: 1rem;
+  }
+  
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .bus-card {
+    padding: 1rem;
+  }
+  
+  .auth-container {
+    padding: 1rem;
+  }
+  
+  .seat-selector {
+    padding: 1rem;
+  }
+  
+  .bus-layout {
+    max-width: 100%;
+  }
+  
+  .seat-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .row-number {
+    width: auto;
+  }
+}
+
+/* Tablet responsive design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .bus-details {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+/* Large screen responsive design */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+  }
+}

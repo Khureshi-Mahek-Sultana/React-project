@@ -1,0 +1,60 @@
+{
+  "buses": [
+    {
+      "id": 1,
+      "name": "Express Travels",
+      "from": "New York",
+      "to": "Boston",
+      "departureTime": "08:00 AM",
+      "arrivalTime": "12:00 PM",
+      "duration": "4h",
+      "price": 45,
+      "totalSeats": 40,
+      "availableSeats": 32,
+      "type": "AC Sleeper",
+      "amenities": ["WiFi", "Charging Ports", "Water Bottle"]
+    },
+    {
+      "id": 2,
+      "name": "Comfort Lines",
+      "from": "New York",
+      "to": "Boston",
+      "departureTime": "10:30 AM",
+      "arrivalTime": "02:30 PM",
+      "duration": "4h",
+      "price": 35,
+      "totalSeats": 35,
+      "availableSeats": 25,
+      "type": "AC Semi-Sleeper",
+      "amenities": ["Charging Ports", "Water Bottle"]
+    },
+    {
+      "id": 3,
+      "name": "Premium Bus",
+      "from": "New York",
+      "to": "Washington DC",
+      "departureTime": "09:00 AM",
+      "arrivalTime": "01:00 PM",
+      "duration": "4h",
+      "price": 55,
+      "totalSeats": 45,
+      "availableSeats": 40,
+      "type": "Luxury AC",
+      "amenities": ["WiFi", "Charging Ports", "Snacks", "Water Bottle"]
+    },
+    {
+      "id": 4,
+      "name": "City Connect",
+      "from": "Boston",
+      "to": "New York",
+      "departureTime": "02:00 PM",
+      "arrivalTime": "06:00 PM",
+      "duration": "4h",
+      "price": 40,
+      "totalSeats": 38,
+      "availableSeats": 30,
+      "type": "AC Seater",
+      "amenities": ["Charging Ports"]
+    }
+  ]
+}

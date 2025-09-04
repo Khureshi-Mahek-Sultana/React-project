@@ -1,0 +1,64 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "userId": 1,
+      "busId": 1,
+      "busName": "Express Travels",
+      "from": "New York",
+      "to": "Boston",
+      "departureTime": "08:00 AM",
+      "arrivalTime": "12:00 PM",
+      "date": "2025-08-28",
+      "seats": [12, 13],
+      "totalPrice": 90,
+      "status": "confirmed",
+      "bookingDate": "2025-08-27T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "busId": 3,
+      "busName": "Premium Bus",
+      "from": "New York",
+      "to": "Washington DC",
+      "departureTime": "09:00 AM",
+      "arrivalTime": "01:00 PM",
+      "date": "2025-08-29",
+      "seats": [5, 6],
+      "totalPrice": 110,
+      "status": "confirmed",
+      "bookingDate": "2025-08-26T14:20:00Z"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "busId": 2,
+      "busName": "Comfort Lines",
+      "from": "New York",
+      "to": "Boston",
+      "departureTime": "10:30 AM",
+      "arrivalTime": "02:30 PM",
+      "date": "2025-08-30",
+      "seats": [8, 9],
+      "totalPrice": 70,
+      "status": "confirmed",
+      "bookingDate": "2025-08-25T16:45:00Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "busId": 4,
+      "busName": "City Connect",
+      "from": "Boston",
+      "to": "New York",
+      "departureTime": "02:00 PM",
+      "arrivalTime": "06:00 PM",
+      "date": "2025-09-01",
+      "seats": [15, 16],
+      "totalPrice": 80,
+      "status": "confirmed",
+      "bookingDate": "2025-08-24T09:15:00Z"
+    }
+  ]
+}
